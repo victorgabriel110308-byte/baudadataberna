@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Baú da Taberna</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #15120f;
+    color: #d5c5a7;
+    font-family: "Cormorant Garamond", serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+
+/* CARTAZ */
+
+.cartaz {
+    width: 100%;
+    max-width: 780px;
+
+    min-height: 720px;
+
+    padding: 55px 45px;
+
+    position: relative;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(25,21,17,.91),
+            rgba(25,21,17,.96)
+        ),
+        url("https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+
+    border: 1px solid #7c6546;
+
+    box-shadow:
+        0 15px 45px rgba(0,0,0,.55);
+}
+
+
+/* BORDA */
+
+.cartaz::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 12px;
+
+    border: 1px solid rgba(178,145,94,.35);
+
+    pointer-events: none;
+}
+
+
+/* TOPO */
+
+.topo {
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #a98958;
+}
+
+
+/* TÍTULO */
+
+h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(50px, 8vw, 85px);
+
+    line-height: .9;
+
+    font-weight: 500;
+
+    color: #dfceb0;
+
+    margin-top: 25px;
+
+    letter-spacing: -2px;
+}
+
+
+/* LINHA */
+
+.linha {
+    width: 55px;
+    height: 1px;
+
+    background: #a18150;
+
+    margin: 25px auto;
+}
+
+
+/* FRASE */
+
+.frase {
+    font-size: 21px;
+    font-style: italic;
+    color: #b9aa92;
+}
+
+
+/* DESCRIÇÃO */
+
+.descricao {
+    max-width: 570px;
+
+    margin: 25px auto 0;
+
+    font-size: 17px;
+
+    line-height: 1.5;
+
+    color: #9f9482;
+}
+
+
+/* CATEGORIAS */
+
+.categorias {
+    margin-top: 30px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+.categorias span {
+    font-size: 12px;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    color: #b69a6d;
+}
+
+.ponto {
+    color: #715c40;
+}
+
+
+/* FRASE FINAL */
+
+.final {
+    margin-top: 35px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 18px;
+
+    font-style: italic;
+
+    color: #b29a72;
+}
+
+
+/* CONTATO */
+
+.contato {
+    margin-top: 30px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid rgba(178,145,94,.2);
+}
+
+.contato-titulo {
+    font-family: "Playfair Display", serif;
+
+    font-size: 15px;
+
+    letter-spacing: 2px;
+
+    color: #b69a6d;
+
+    margin-bottom: 7px;
+}
+
+.contato p {
+    font-size: 14px;
+
+    line-height: 1.4;
+
+    color: #968a77;
+}
+
+.contato a {
+    color: #b69a6d;
+
+    text-decoration: none;
+}
+
+
+/* ASSINATURA */
+
+.assinatura {
+    margin-top: 25px;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    color: #806b4c;
+
+    text-transform: uppercase;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .cartaz {
+        min-height: auto;
+
+        padding: 45px 25px;
+
+    }
+
+    .cartaz::before {
+        inset: 8px;
+    }
+
+    .topo {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    h1 {
+        font-size: 52px;
+
+        margin-top: 20px;
+    }
+
+    .frase {
+        font-size: 19px;
+    }
+
+    .descricao {
+        font-size: 16px;
+
+        line-height: 1.45;
+
+        margin-top: 20px;
+    }
+
+    .categorias {
+        margin-top: 25px;
+        gap: 8px;
+    }
+
+    .categorias span {
+        font-size: 10px;
+    }
+
+    .final {
+        margin-top: 30px;
+        font-size: 16px;
+    }
+
+    .contato {
+        margin-top: 25px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="cartaz">
+
+
+    <div class="topo">
+        Música · Cinema · Literatura · Cultura
+    </div>
+
+
+    <h1>
+        Baú da<br>
+        Taberna
+    </h1>
+
+
+    <div class="linha"></div>
+
+
+    <div class="frase">
+        Onde os clássicos nunca saem de moda.
+    </div>
+
+
+    <p class="descricao">
+
+        Música, cinema, literatura e cultura
+        em um só lugar.
+
+        <br>
+
+        Vinis, CDs, livros, HQs da DC e instrumentos
+        para quem ainda encontra beleza naquilo
+        que o tempo não conseguiu apagar.
+
+    </p>
+
+
+    <div class="categorias">
+
+        <span>Vinil</span>
+        <span class="ponto">•</span>
+
+        <span>CDs</span>
+        <span class="ponto">•</span>
+
+        <span>Livros</span>
+        <span class="ponto">•</span>
+
+        <span>HQs</span>
+        <span class="ponto">•</span>
+
+        <span>Música</span>
+
+    </div>
+
+
+    <div class="final">
+
+        “Algumas coisas não envelhecem.<br>
+        Apenas moram na memória.”
+
+    </div>
+
+
+    <div class="contato">
+
+        <div class="contato-titulo">
+            VISITE-NOS
+        </div>
+
+        <p>
+            Rua Rego Barros, 141 — Centro — Rio das Ostras<br>
+            Shopping de Madeira
+        </p>
+
+        <p style="margin-top: 5px;">
+
+            <a href="tel:+5522997775834">
+                (22) 99777-5834
+            </a>
+
+        </p>
+
+    </div>
+
+
+    <div class="assinatura">
+        Baú da Taberna
+    </div>
+
+
+</div>
+
+</body>
+</html>
